@@ -48,7 +48,7 @@ public LoadStreet()
 	{
 		street_data[id][street_id] = cache_get_field_content_int(i, "sqlid");
 		cache_get_field_content(i, "name", street_data[id][street_name], dbHandler, MAX_STREET_NAME);
-		cache_get_field_content(i, "direction", street_data[id][street_direction], dbHandler, MAX_ZONE_NAME);
+		cache_get_field_content(i, "direction", street_data[id][street_direction], dbHandler, MAX_STREET_NAME);
 		street_data[id][street_location][0] = cache_get_field_content_float(i, "minX");
 		street_data[id][street_location][1] = cache_get_field_content_float(i, "minY");
 		street_data[id][street_location][2] = cache_get_field_content_float(i, "minZ");
