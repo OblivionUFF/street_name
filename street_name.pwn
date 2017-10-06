@@ -15,7 +15,7 @@ enum E_STREETDATA
 	Float: street_location[6], // MinX-Z, MaxX-Z
 	Float: plate_location[6], // offset & rot
 	Float: sign_location[6], // offset & rot
-	Float: detail_location[6], // offset & rot
+	Float: text_location[6], // offset & rot
 	street_object[3]
 }
 new street_data[MAX_STREET][E_STREETDATA];
@@ -67,12 +67,12 @@ public LoadStreet()
 		street_data[id][sign_location][3] = cache_get_field_content_float(i, "sign_rotX");
 		street_data[id][sign_location][4] = cache_get_field_content_float(i, "sign_rotY");
 		street_data[id][sign_location][5] = cache_get_field_content_float(i, "sign_rotZ");	
-		street_data[id][detail_location][0] = cache_get_field_content_float(i, "text_offsetX");
-		street_data[id][detail_location][1] = cache_get_field_content_float(i, "text_offsetY");
-		street_data[id][detail_location][2] = cache_get_field_content_float(i, "text_offsetZ");
-		street_data[id][detail_location][3] = cache_get_field_content_float(i, "text_rotX");
-		street_data[id][detail_location][4] = cache_get_field_content_float(i, "text_rotY");
-		street_data[id][detail_location][5] = cache_get_field_content_float(i, "text_rotZ");
+		street_data[id][text_location][0] = cache_get_field_content_float(i, "text_offsetX");
+		street_data[id][text_location][1] = cache_get_field_content_float(i, "text_offsetY");
+		street_data[id][text_location][2] = cache_get_field_content_float(i, "text_offsetZ");
+		street_data[id][text_location][3] = cache_get_field_content_float(i, "text_rotX");
+		street_data[id][text_location][4] = cache_get_field_content_float(i, "text_rotY");
+		street_data[id][text_location][5] = cache_get_field_content_float(i, "text_rotZ");
 
 		street_data[id][street_object][0] = CreateDynamicObject(19981, street_data[id][street_location][0], street_data[id][street_location][1], street_data[id][street_location][2], 0.0, 0.0, 0.0, -1, -1, -1, 300.00, 300.00);
 
