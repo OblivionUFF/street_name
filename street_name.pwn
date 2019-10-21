@@ -1,5 +1,6 @@
 #include <a_samp>
 #include <a_mysql>
+#include <sscanf2>
 #include <streamer>
 
 #define MAX_STREET (150)
